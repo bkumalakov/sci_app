@@ -14,7 +14,7 @@ class Author(models.Model):
 
 class PType(models.Model):
     type_name = models.CharField(max_length=30, default='N/A')
-    description = models.TextField(max_length=250, null=True)
+    description = models.TextField(max_length=250, null=True, blank=True)
 
     def __str__(self):
         return self.type_name
